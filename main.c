@@ -9,7 +9,6 @@ int main() {
     ST_cardData_t *cardData = malloc(sizeof(ST_cardData_t));
     strcpy(cardData->primaryAccountNumber, "1234567890123456");
     strcpy(cardData->cardExpirationDate, "13/21");
-    termData
 
     getTransactionDate(termData);
     printf("%d", isCardExpired(cardData, termData));
