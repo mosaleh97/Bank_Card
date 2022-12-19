@@ -1,0 +1,26 @@
+# ninja log v5
+0	18	1671478325938055863	CMakeFiles/payment_app.dir/main.c.o	ddb5d9eb9df8a23
+0	21	1671478325938055863	CMakeFiles/payment_app.dir/card/card.c.o	b6699006fbc00be1
+1	25	1671478325942055958	CMakeFiles/payment_app.dir/server/server.c.o	f0bf9ba7478e6a18
+0	27	1671478325946056051	CMakeFiles/payment_app.dir/terminal/terminal.c.o	811572b9b733b5e0
+28	41	1671478325958056335	payment_app	236c29e9e0f7b06e
+0	15	1671478636761686309	CMakeFiles/payment_app.dir/terminal/terminal.c.o	811572b9b733b5e0
+15	28	1671478636773686400	payment_app	236c29e9e0f7b06e
+0	18	1671478860290157502	CMakeFiles/payment_app.dir/main.c.o	ddb5d9eb9df8a23
+18	31	1671478860306157123	payment_app	236c29e9e0f7b06e
+0	19	1671479680002032444	CMakeFiles/payment_app.dir/main.c.o	ddb5d9eb9df8a23
+19	38	1671479680026032585	payment_app	236c29e9e0f7b06e
+0	21	1671479718298244104	CMakeFiles/payment_app.dir/terminal/terminal.c.o	811572b9b733b5e0
+21	36	1671479718310244167	payment_app	236c29e9e0f7b06e
+0	19	1671479828566728926	CMakeFiles/payment_app.dir/main.c.o	ddb5d9eb9df8a23
+19	40	1671479828594729029	payment_app	236c29e9e0f7b06e
+0	22	1671481429759380525	CMakeFiles/payment_app.dir/terminal/terminal.c.o	811572b9b733b5e0
+22	33	1671481429775380532	payment_app	236c29e9e0f7b06e
+0	17	1671481519423421724	CMakeFiles/payment_app.dir/terminal/terminal.c.o	811572b9b733b5e0
+17	31	1671481519435421730	payment_app	236c29e9e0f7b06e
+0	19	1671481541175432192	CMakeFiles/payment_app.dir/main.c.o	ddb5d9eb9df8a23
+19	35	1671481541195432202	payment_app	236c29e9e0f7b06e
+0	19	1671481553223438055	CMakeFiles/payment_app.dir/main.c.o	ddb5d9eb9df8a23
+19	39	1671481553247438067	payment_app	236c29e9e0f7b06e
+0	19	1671481571575447087	CMakeFiles/payment_app.dir/main.c.o	ddb5d9eb9df8a23
+19	33	1671481571595447096	payment_app	236c29e9e0f7b06e
