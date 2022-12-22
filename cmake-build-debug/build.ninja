@@ -49,11 +49,11 @@ cmake_ninja_workdir = /home/mohamed/CLionProjects/payment_app/cmake-build-debug/
 
 build cmake_object_order_depends_target_payment_app: phony || CMakeFiles/payment_app.dir
 
-build CMakeFiles/payment_app.dir/main.c.o: C_COMPILER__payment_app_Debug /home/mohamed/CLionProjects/payment_app/main.c || cmake_object_order_depends_target_payment_app
-  DEP_FILE = CMakeFiles/payment_app.dir/main.c.o.d
+build CMakeFiles/payment_app.dir/application/application.c.o: C_COMPILER__payment_app_Debug /home/mohamed/CLionProjects/payment_app/application/application.c || cmake_object_order_depends_target_payment_app
+  DEP_FILE = CMakeFiles/payment_app.dir/application/application.c.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu11
   OBJECT_DIR = CMakeFiles/payment_app.dir
-  OBJECT_FILE_DIR = CMakeFiles/payment_app.dir
+  OBJECT_FILE_DIR = CMakeFiles/payment_app.dir/application
 
 build CMakeFiles/payment_app.dir/card/card.c.o: C_COMPILER__payment_app_Debug /home/mohamed/CLionProjects/payment_app/card/card.c || cmake_object_order_depends_target_payment_app
   DEP_FILE = CMakeFiles/payment_app.dir/card/card.c.o.d
@@ -73,6 +73,12 @@ build CMakeFiles/payment_app.dir/server/server.c.o: C_COMPILER__payment_app_Debu
   OBJECT_DIR = CMakeFiles/payment_app.dir
   OBJECT_FILE_DIR = CMakeFiles/payment_app.dir/server
 
+build CMakeFiles/payment_app.dir/main.c.o: C_COMPILER__payment_app_Debug /home/mohamed/CLionProjects/payment_app/main.c || cmake_object_order_depends_target_payment_app
+  DEP_FILE = CMakeFiles/payment_app.dir/main.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/payment_app.dir
+  OBJECT_FILE_DIR = CMakeFiles/payment_app.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target payment_app
@@ -81,7 +87,7 @@ build CMakeFiles/payment_app.dir/server/server.c.o: C_COMPILER__payment_app_Debu
 #############################################
 # Link the executable payment_app
 
-build payment_app: C_EXECUTABLE_LINKER__payment_app_Debug CMakeFiles/payment_app.dir/main.c.o CMakeFiles/payment_app.dir/card/card.c.o CMakeFiles/payment_app.dir/terminal/terminal.c.o CMakeFiles/payment_app.dir/server/server.c.o
+build payment_app: C_EXECUTABLE_LINKER__payment_app_Debug CMakeFiles/payment_app.dir/application/application.c.o CMakeFiles/payment_app.dir/card/card.c.o CMakeFiles/payment_app.dir/terminal/terminal.c.o CMakeFiles/payment_app.dir/server/server.c.o CMakeFiles/payment_app.dir/main.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/payment_app.dir
   POST_BUILD = :

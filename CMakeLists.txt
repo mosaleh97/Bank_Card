@@ -3,4 +3,4 @@ project(payment_app C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(payment_app main.c card/card.h card/card.c terminal/terminal.h terminal/terminal.c server/server.c server/server.h)
+add_executable(payment_app application/application.c card/card.h card/card.c terminal/terminal.h terminal/terminal.c server/server.c server/server.h application/application.h main.c)

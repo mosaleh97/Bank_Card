@@ -14,8 +14,6 @@ EN_terminalError_t getTransactionDate(ST_terminalData_t *termData)
     struct tm tm = *localtime(&t);
     // Set the date in the terminal data structure in the format dd/mm/yyyy
     sprintf(termData->transactionDate, "%02d/%02d/%04d", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
-    // Print the date
-    printf("Transaction Date: %s\n", termData->transactionDate);
     return TERMINAL_OK;
 }
 
@@ -29,7 +27,7 @@ EN_terminalError_t isCardExpired(ST_cardData_t *cardData, ST_terminalData_t *ter
 }
 
 EN_terminalError_t getTransactionAmount(ST_terminalData_t *termData){
-    printf("Enter transaction amount: ");
+    printf("Enter transaction amount: \n");
     scanf("%f", &(termData->transAmount));
     // Check that amount is positive
     if(termData->transAmount <= 0)
@@ -39,7 +37,7 @@ EN_terminalError_t getTransactionAmount(ST_terminalData_t *termData){
     return TERMINAL_OK;
 }
 
-EN_terminalError_t isBelowMaxTransAmount(ST_terminalData_t *termData){
+EN_terminalError_t isBelowMaxAmount(ST_terminalData_t *termData){
     // Check that transaction amount is below the maximum transaction amount
     if(termData->transAmount > termData->maxTransAmount)
     {

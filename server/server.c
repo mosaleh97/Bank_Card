@@ -8,39 +8,46 @@
 #include <string.h>
 #include <stdbool.h>
 
-EN_transStat_t recieveTransactionData(ST_transaction *transData){
+EN_transStat_t recieveTransactionData(ST_transaction *transData) {
     ST_accountsDB_t accountRefrence;
-    if(isValidAccount(&(transData->cardHolderData), &accountRefrence) == ACCOUNT_NOT_FOUND){
-        return FRAUD_CARD;
+    transData->transState = APPROVED;
+    if (isValidAccount(&(transData->cardHolderData), &accountRefrence) == ACCOUNT_NOT_FOUND) {
+        transData->transState = FRAUD_CARD;
+        //return FRAUD_CARD;
     }
-    if(isBlockedAccount(&accountRefrence) == BLOCKED_ACCOUNT){
-        return DECLINED_STOLEN_CARD;
+    if (isBlockedAccount(&accountRefrence) == BLOCKED_ACCOUNT) {
+        transData->transState = DECLINED_STOLEN_CARD;
+        //return DECLINED_STOLEN_CARD;
     }
-    if(isAmountAvailable(&(transData->terminalData), &accountRefrence) == LOW_BALANCE){
-        return DECLINED_INSUFFECIENT_FUND;
+    if (isAmountAvailable(&(transData->terminalData), &accountRefrence) == LOW_BALANCE) {
+        transData->transState = DECLINED_INSUFFECIENT_FUND;
+        //return DECLINED_INSUFFECIENT_FUND;
     }
-    if(saveTransaction(transData) == SAVING_FAILED){
-        return INTERNAL_SERVER_ERROR;
+    if (saveTransaction(transData) == SAVING_FAILED) {
+        transData->transState = INTERNAL_SERVER_ERROR;
+        //return INTERNAL_SERVER_ERROR;
     }
-    FILE *outfile;
+    if (transData->transState == APPROVED) {
+        {
+            FILE *outfile;
 
-    // open file for writing and reading
-    outfile = fopen ("Accounts_DB", "r+");
-    // Update account balance
-    bool accountFound = false;
-    // read file contents till end of file
-    while(fread(&accountRefrence, sizeof(ST_accountsDB_t), 1, outfile))
-    {
-        if(strcmp(accountRefrence.primaryAccountNumber, transData->cardHolderData.primaryAccountNumber) == 0){
-            accountFound = true;
-            break;
+            // open file for writing and reading
+            outfile = fopen("../Accounts_DB.txt", "r+");
+            // Update account balance
+            accountRefrence.balance -= transData->terminalData.transAmount;
+            // read file contents till account number is found
+            while (fread(&accountRefrence, sizeof(ST_accountsDB_t), 1, outfile)) {
+                if (strcmp(accountRefrence.primaryAccountNumber, transData->cardHolderData.primaryAccountNumber) == 0) {
+                    break;
+                }
+            }
+
+            fseek(outfile, -sizeof(ST_accountsDB_t), SEEK_CUR);
+            fwrite(&accountRefrence, sizeof(ST_accountsDB_t), 1, outfile);
+            fclose(outfile);
         }
     }
-
-    fseek(outfile, -sizeof(ST_accountsDB_t), SEEK_CUR);
-    fwrite(&accountRefrence, sizeof(ST_accountsDB_t), 1, outfile);
-
-    return APPROVED;
+    return transData->transState;
 }
 
 EN_serverError_t isValidAccount(ST_cardData_t *cardData, ST_accountsDB_t *accountRefrence){
@@ -48,7 +55,7 @@ EN_serverError_t isValidAccount(ST_cardData_t *cardData, ST_accountsDB_t *accoun
     // Open database file
     FILE *infile;
     // open file for reading and writing
-    infile = fopen ("Accounts_DB", "r+");
+    infile = fopen ("../Accounts_DB.txt", "r+");
 
     if (infile == NULL)
     {
@@ -96,24 +103,27 @@ EN_serverError_t isAmountAvailable(ST_terminalData_t *termData, ST_accountsDB_t 
 
 EN_serverError_t saveTransaction(ST_transaction *transData){
     // Get sequence number from DB
-    FILE *file = fopen("sequence.txt", "r");
+    FILE *file = fopen("../Sequence_number.txt", "r+");
     if(file == NULL){
+        printf("Error opening file");
         return SAVING_FAILED;
     }
     size_t size = fread(&transData->transactionSequenceNumber, sizeof(uint32_t), 1, file);
-    // Increment sequence number
-    transData->transactionSequenceNumber++;
-    // Save sequence number
-    file = fopen("sequence.txt", "w");
-    if(file == NULL){
-        return SAVING_FAILED;
-    }
-    size = fwrite(&transData->transactionSequenceNumber, sizeof(uint32_t), 1, file);
     if(size != 1){
+        printf("Error reading file");
         return SAVING_FAILED;
     }
+    rewind(file);
+    // Increment sequence number
+    transData->transactionSequenceNumber = transData->transactionSequenceNumber + 1;
+    size = fwrite(&(transData->transactionSequenceNumber), sizeof(uint32_t), 1, file);
+    if(size != 1){
+        printf("Error writing to file");
+        return SAVING_FAILED;
+    }
+    fclose(file);
     // Save transaction
-    file = fopen("transactions.txt", "a");
+    file = fopen("../Transactions_DB.txt", "a");
     if(file == NULL){
         return SAVING_FAILED;
     }
@@ -121,27 +131,40 @@ EN_serverError_t saveTransaction(ST_transaction *transData){
     if(size != 1){
         return SAVING_FAILED;
     }
+    // Close file
+    fclose(file);
     listSavedTransactions();
     return SERVER_OK;
 }
 
 void listSavedTransactions(void) {
-    FILE *file = fopen("transactions.txt", "r");
+    FILE *file = fopen("../Transactions_DB.txt", "r");
     if (file == NULL) {
         return;
     }
     ST_transaction transData;
     size_t size = fread(&transData, sizeof(ST_transaction), 1, file);
     while (size == 1) {
-        printf("#########################");
-        printf("Transaction Sequence Number: %d", transData.transactionSequenceNumber);
-        printf("Transaction Date: %s", transData.terminalData.transactionDate);
-        printf("Transaction Amount: %f", transData.terminalData.transAmount);
-        printf("Transaction State: %d", transData.transState);
-        printf("Terminal Max Amount: %f", transData.terminalData.maxTransAmount);
-        printf("Cardholder Name: %s", transData.cardHolderData.cardHolderName);
-        printf("PAN: %s", transData.cardHolderData.primaryAccountNumber);
-        printf("Card Expiration Date: %s", transData.cardHolderData.cardExpirationDate);
-        printf("#########################");
+        printf("#########################\n");
+        printf("Transaction Sequence Number: %d\n", transData.transactionSequenceNumber);
+        printf("Transaction Date: %s\n", transData.terminalData.transactionDate);
+        printf("Transaction Amount: %f\n", transData.terminalData.transAmount);
+        if(transData.transState == APPROVED){
+            printf("Transaction State: APPROVED\n");
+        } else if(transData.transState == DECLINED_INSUFFECIENT_FUND){
+            printf("Transaction State: DECLINED_INSUFFECIENT_FUND\n");
+        } else if (transData.transState == DECLINED_STOLEN_CARD){
+            printf("Transaction State: DECLINED_STOLEN_CARD\n");
+        } else if(transData.transState == FRAUD_CARD){
+            printf("Transaction State: FRAUD_CARD\n");
+        } else if(transData.transState == INTERNAL_SERVER_ERROR){
+            printf("Transaction State: INTERNAL_SERVER_ERROR\n");
+        }
+        printf("Terminal Max Amount: %f\n", transData.terminalData.maxTransAmount);
+        printf("Cardholder Name: %s\n", transData.cardHolderData.cardHolderName);
+        printf("PAN: %s\n", transData.cardHolderData.primaryAccountNumber);
+        printf("Card Expiration Date: %s\n", transData.cardHolderData.cardExpirationDate);
+        printf("#########################\n");
+        size = fread(&transData, sizeof(ST_transaction), 1, file);
     }
 }

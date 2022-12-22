@@ -1,16 +1,21 @@
-
-#include <stdio.h>
-#include "terminal/terminal.h"
-#include <stdlib.h>
-#include <string.h>
+//
+// Created by mohamed on 22/12/22.
+//
+#include "application/application.h"
 
 int main() {
-    ST_terminalData_t *termData = malloc(sizeof(ST_terminalData_t));
-    ST_cardData_t *cardData = malloc(sizeof(ST_cardData_t));
-    strcpy(cardData->primaryAccountNumber, "1234567890123456");
-    strcpy(cardData->cardExpirationDate, "13/21");
+    uint32_t seq = 0;
+    ST_accountsDB_t account;
+    account.balance = 1000;
+    account.state = BLOCKED;
+    strcpy(account.primaryAccountNumber, "11652943083297258");
+    FILE *fptr = fopen("../Sequence_number.txt", "r+");
+    fwrite(&seq, sizeof(uint32_t), 1, fptr);
+    fclose(fptr);
+    fptr = fopen("../Accounts_DB.txt", "a");
+    fwrite(&account, sizeof(ST_accountsDB_t), 1, fptr);
+    fclose(fptr);
 
-    getTransactionDate(termData);
-    printf("%d", isCardExpired(cardData, termData));
+    appStart();
     return 0;
 }
