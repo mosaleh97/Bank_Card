@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/mohamed/CLionProjects/payment_app/cmake-build-debug"
+			"value" : "/home/mohamed/CLionProjects/bank_card_app/payment_app/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -115,7 +115,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/218/bin/cmake/linux/bin/cmake"
+			"value" : "/snap/clion/219/bin/cmake/linux/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -127,7 +127,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/218/bin/cmake/linux/bin/cpack"
+			"value" : "/snap/clion/219/bin/cmake/linux/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -139,7 +139,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/218/bin/cmake/linux/bin/ctest"
+			"value" : "/snap/clion/219/bin/cmake/linux/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER",
@@ -415,7 +415,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/mohamed/CLionProjects/payment_app/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/mohamed/CLionProjects/bank_card_app/payment_app/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -475,7 +475,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/mohamed/CLionProjects/payment_app"
+			"value" : "/home/mohamed/CLionProjects/bank_card_app/payment_app"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -527,7 +527,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "/snap/clion/218/bin/ninja/linux/ninja"
+			"value" : "/snap/clion/219/bin/ninja/linux/ninja"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -759,7 +759,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/218/bin/cmake/linux/share/cmake-3.24"
+			"value" : "/snap/clion/219/bin/cmake/linux/share/cmake-3.24"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1019,7 +1019,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/mohamed/CLionProjects/payment_app/cmake-build-debug"
+			"value" : "/home/mohamed/CLionProjects/bank_card_app/payment_app/cmake-build-debug"
 		},
 		{
 			"name" : "payment_app_IS_TOP_LEVEL",
@@ -1043,7 +1043,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/mohamed/CLionProjects/payment_app"
+			"value" : "/home/mohamed/CLionProjects/bank_card_app/payment_app"
 		}
 	],
 	"kind" : "cache",

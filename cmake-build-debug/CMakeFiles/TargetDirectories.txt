@@ -1,3 +1,3 @@
-/home/mohamed/CLionProjects/payment_app/cmake-build-debug/CMakeFiles/payment_app.dir
-/home/mohamed/CLionProjects/payment_app/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/mohamed/CLionProjects/payment_app/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mohamed/CLionProjects/bank_card_app/payment_app/cmake-build-debug/CMakeFiles/payment_app.dir
+/home/mohamed/CLionProjects/bank_card_app/payment_app/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mohamed/CLionProjects/bank_card_app/payment_app/cmake-build-debug/CMakeFiles/rebuild_cache.dir

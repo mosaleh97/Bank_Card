@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/mohamed/CLionProjects/payment_app/cmake-build-debug/
+cmake_ninja_workdir = /home/mohamed/CLionProjects/bank_card_app/payment_app/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target payment_app
 
@@ -49,35 +49,45 @@ cmake_ninja_workdir = /home/mohamed/CLionProjects/payment_app/cmake-build-debug/
 
 build cmake_object_order_depends_target_payment_app: phony || CMakeFiles/payment_app.dir
 
-build CMakeFiles/payment_app.dir/application/application.c.o: C_COMPILER__payment_app_Debug /home/mohamed/CLionProjects/payment_app/application/application.c || cmake_object_order_depends_target_payment_app
+build CMakeFiles/payment_app.dir/application/application.c.o: C_COMPILER__payment_app_Debug /home/mohamed/CLionProjects/bank_card_app/payment_app/application/application.c || cmake_object_order_depends_target_payment_app
   DEP_FILE = CMakeFiles/payment_app.dir/application/application.c.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu11
   OBJECT_DIR = CMakeFiles/payment_app.dir
   OBJECT_FILE_DIR = CMakeFiles/payment_app.dir/application
+  TARGET_COMPILE_PDB = CMakeFiles/payment_app.dir/
+  TARGET_PDB = payment_app.pdb
 
-build CMakeFiles/payment_app.dir/card/card.c.o: C_COMPILER__payment_app_Debug /home/mohamed/CLionProjects/payment_app/card/card.c || cmake_object_order_depends_target_payment_app
+build CMakeFiles/payment_app.dir/card/card.c.o: C_COMPILER__payment_app_Debug /home/mohamed/CLionProjects/bank_card_app/payment_app/card/card.c || cmake_object_order_depends_target_payment_app
   DEP_FILE = CMakeFiles/payment_app.dir/card/card.c.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu11
   OBJECT_DIR = CMakeFiles/payment_app.dir
   OBJECT_FILE_DIR = CMakeFiles/payment_app.dir/card
+  TARGET_COMPILE_PDB = CMakeFiles/payment_app.dir/
+  TARGET_PDB = payment_app.pdb
 
-build CMakeFiles/payment_app.dir/terminal/terminal.c.o: C_COMPILER__payment_app_Debug /home/mohamed/CLionProjects/payment_app/terminal/terminal.c || cmake_object_order_depends_target_payment_app
+build CMakeFiles/payment_app.dir/terminal/terminal.c.o: C_COMPILER__payment_app_Debug /home/mohamed/CLionProjects/bank_card_app/payment_app/terminal/terminal.c || cmake_object_order_depends_target_payment_app
   DEP_FILE = CMakeFiles/payment_app.dir/terminal/terminal.c.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu11
   OBJECT_DIR = CMakeFiles/payment_app.dir
   OBJECT_FILE_DIR = CMakeFiles/payment_app.dir/terminal
+  TARGET_COMPILE_PDB = CMakeFiles/payment_app.dir/
+  TARGET_PDB = payment_app.pdb
 
-build CMakeFiles/payment_app.dir/server/server.c.o: C_COMPILER__payment_app_Debug /home/mohamed/CLionProjects/payment_app/server/server.c || cmake_object_order_depends_target_payment_app
+build CMakeFiles/payment_app.dir/server/server.c.o: C_COMPILER__payment_app_Debug /home/mohamed/CLionProjects/bank_card_app/payment_app/server/server.c || cmake_object_order_depends_target_payment_app
   DEP_FILE = CMakeFiles/payment_app.dir/server/server.c.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu11
   OBJECT_DIR = CMakeFiles/payment_app.dir
   OBJECT_FILE_DIR = CMakeFiles/payment_app.dir/server
+  TARGET_COMPILE_PDB = CMakeFiles/payment_app.dir/
+  TARGET_PDB = payment_app.pdb
 
-build CMakeFiles/payment_app.dir/main.c.o: C_COMPILER__payment_app_Debug /home/mohamed/CLionProjects/payment_app/main.c || cmake_object_order_depends_target_payment_app
+build CMakeFiles/payment_app.dir/main.c.o: C_COMPILER__payment_app_Debug /home/mohamed/CLionProjects/bank_card_app/payment_app/main.c || cmake_object_order_depends_target_payment_app
   DEP_FILE = CMakeFiles/payment_app.dir/main.c.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu11
   OBJECT_DIR = CMakeFiles/payment_app.dir
   OBJECT_FILE_DIR = CMakeFiles/payment_app.dir
+  TARGET_COMPILE_PDB = CMakeFiles/payment_app.dir/
+  TARGET_PDB = payment_app.pdb
 
 
 # =============================================================================
@@ -92,15 +102,16 @@ build payment_app: C_EXECUTABLE_LINKER__payment_app_Debug CMakeFiles/payment_app
   OBJECT_DIR = CMakeFiles/payment_app.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/payment_app.dir/
   TARGET_FILE = payment_app
-  TARGET_PDB = payment_app.dbg
+  TARGET_PDB = payment_app.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mohamed/CLionProjects/payment_app/cmake-build-debug && /snap/clion/218/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/mohamed/CLionProjects/bank_card_app/payment_app/cmake-build-debug && /snap/clion/219/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -111,7 +122,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mohamed/CLionProjects/payment_app/cmake-build-debug && /snap/clion/218/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/mohamed/CLionProjects/payment_app -B/home/mohamed/CLionProjects/payment_app/cmake-build-debug
+  COMMAND = cd /home/mohamed/CLionProjects/bank_card_app/payment_app/cmake-build-debug && /snap/clion/219/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/mohamed/CLionProjects/bank_card_app/payment_app -B/home/mohamed/CLionProjects/bank_card_app/payment_app/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -127,7 +138,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /home/mohamed/CLionProjects/payment_app/cmake-build-debug
+# Folder: /home/mohamed/CLionProjects/bank_card_app/payment_app/cmake-build-debug
 
 build all: phony payment_app
 
@@ -138,14 +149,14 @@ build all: phony payment_app
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/mohamed/CLionProjects/payment_app/CMakeLists.txt /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/mohamed/CLionProjects/bank_card_app/payment_app/CMakeLists.txt /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompilerABI.c /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystem.cmake.in /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/mohamed/CLionProjects/payment_app/CMakeLists.txt /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+build /home/mohamed/CLionProjects/bank_card_app/payment_app/CMakeLists.txt /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompilerABI.c /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystem.cmake.in /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /snap/clion/219/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
 
 
 #############################################

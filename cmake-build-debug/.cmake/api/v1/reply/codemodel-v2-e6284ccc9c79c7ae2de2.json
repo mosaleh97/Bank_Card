@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/mohamed/CLionProjects/payment_app/cmake-build-debug",
-		"source" : "/home/mohamed/CLionProjects/payment_app"
+		"build" : "/home/mohamed/CLionProjects/bank_card_app/payment_app/cmake-build-debug",
+		"source" : "/home/mohamed/CLionProjects/bank_card_app/payment_app"
 	},
 	"version" : 
 	{
